@@ -343,7 +343,43 @@ startGame()
 // write your code after this line:
 
 
+    function makeDiagonal() {
+        for (let i = 0; i < 8; i++) {
+            KAREL.turnLeft()
+            moveRight()
+            moveThenBall()
+        }
+    }
 
+    function moveRight() {
+        KAREL.move()
+        KAREL.turnRight()
+    }
+
+    function moveThenBall() {
+        KAREL.move()
+        KAREL.putBall("red")
+    }
+
+
+    KAREL.putBall("red")
+    moveRight()
+    moveThenBall()
+    makeDiagonal()
+
+    KAREL.turnRight()
+
+    for (let i = 0; i < 9; i++) {
+        KAREL.move()
+    }
+
+    KAREL.putBall("red")
+
+    KAREL.turnRight()
+    
+    moveRight()
+    moveThenBall()
+    makeDiagonal()
 
 
 
